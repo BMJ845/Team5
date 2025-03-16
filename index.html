@@ -10,7 +10,6 @@
       font-family: "Segoe UI", sans-serif;
       background: linear-gradient(to bottom right, #f0f8ff, #e6f0fa);
       color: #222;
-      overflow-x: hidden;
     }
 
     header {
@@ -58,15 +57,14 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       text-align: center;
       transition: all 0.3s ease;
-      transform: translateY(20px);
-      opacity: 0;
       animation: fadeInUp 0.6s forwards;
     }
 
-    .card:nth-child(1) { animation-delay: 0.1s; }
-    .card:nth-child(2) { animation-delay: 0.2s; }
-    .card:nth-child(3) { animation-delay: 0.3s; }
-    .card:nth-child(4) { animation-delay: 0.4s; }
+    .card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
 
     .card h3 {
       color: #007acc;
@@ -89,6 +87,10 @@
     }
 
     @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
       to {
         transform: translateY(0);
         opacity: 1;
@@ -100,33 +102,51 @@
 
   <header>
     <h1>AplusCloud</h1>
-    <p>Team5's Cloud Platform - Connect the Future</p>
+    <p>Team5의 클라우드 플랫폼 - 미래를 연결합니다</p>
   </header>
 
   <section>
-    <h2>Our Services</h2>
+    <h2>서비스 소개</h2>
     <div class="services">
       <div class="card">
-        <h3>Cloud <strong>Compute</strong></h3>
-        <p>Launch scalable virtual machines in seconds with high performance.</p>
+        <img src="cloud_server.png" alt="Cloud Compute">
+        <h3>가상 서버</h3>
+        <p>확장 가능한 고성능 클라우드 인스턴스를 빠르게 시작하세요.</p>
       </div>
       <div class="card">
-        <h3>Cloud <strong>Storage</strong></h3>
-        <p>Secure, flexible data storage for all your applications.</p>
+        <img src="cloud_storage.png" alt="Cloud Storage">
+        <h3>클라우드 스토리지</h3>
+        <p>데이터를 안전하고 유연하게 저장하고 관리할 수 있습니다.</p>
       </div>
       <div class="card">
-        <h3>AI & <strong>Machine Learning</strong></h3>
-        <p>Train and deploy intelligent models using AplusCloud's ML engine.</p>
+        <img src="ai_ml.png" alt="AI ML">
+        <h3>AI / 머신러닝</h3>
+        <p>지능형 모델을 학습하고 배포할 수 있는 강력한 플랫폼입니다.</p>
       </div>
       <div class="card">
-        <h3><strong>API Gateway</strong></h3>
-        <p>Manage and secure your APIs with high availability and low latency.</p>
+        <img src="api_gateway.png" alt="API Gateway">
+        <h3>API 게이트웨이</h3>
+        <p>안정적이고 빠른 API 연결로 개발을 지원합니다.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Meet Our Team</h2>
+    <h2>기술 개요</h2>
+    <div class="card" style="max-width: 800px; margin: 0 auto;">
+      <p>
+        AplusCloud는 안정성과 확장성을 핵심으로 한 클라우드 인프라 서비스를 제공합니다.<br><br>
+        - 고성능 컴퓨팅 환경을 위한 <strong>가상 서버</strong> 및 <strong>컨테이너 관리</strong><br>
+        - 탄력적인 <strong>클라우드 스토리지</strong>와 백업 솔루션<br>
+        - <strong>AI/머신러닝</strong> 학습 및 배포 플랫폼<br>
+        - REST 기반 <strong>API 게이트웨이</strong>와 인증 시스템<br><br>
+        모든 서비스는 자동 확장(Auto Scaling), 보안 암호화, 로드밸런싱 기능을 포함합니다.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>팀원 소개</h2>
     <div class="team">
       <div class="card"><h3>배민준</h3></div>
       <div class="card"><h3>박현서</h3></div>
